@@ -1,0 +1,19 @@
+﻿@using Witinyki.Controllers
+@using Microsoft.Web.Mvc
+<div id="page-actions">
+    @{
+        string pageName = ViewBag.Page.PageName;
+        string version = ViewBag.Page.Version;
+        ViewBag.Title = pageName;
+    }
+    <ul>
+        <li>@(Html.ActionLink<WikiController>(c => c.History(@pageName), "Versions"))</li>
+        <li>Delete</li>
+    </ul>
+</div>
+<div id="main">
+    <h1>@ViewBag.Title</h1>
+    <p>
+        @ViewBag.Page.Content
+    </p>
+</div>

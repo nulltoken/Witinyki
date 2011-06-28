@@ -1,0 +1,23 @@
+﻿@using Witinyki
+@using Witinyki.Controllers
+@using Microsoft.Web.Mvc
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrap">
+        <div id="wiki-actions">
+            <ul>
+                <li>@(Html.ActionLink<WikiController>(c => c.Browse(Constants.HomePage, null), Constants.HomePage))</li>
+                <li>@(Html.ActionLink<WikiController>(c => c.AllPages(), "Pages"))</li>
+                <li>@(Html.ActionLink<WikiController>(c => c.History(null), "WikiHistory"))</li>
+                <li>NewPage</li>
+            </ul>
+        </div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿@using Witinyki.Models
+<div id="main">
+    <h1>@ViewBag.Title</h1>
+    <ul>
+        @foreach (CommitModel s in @ViewBag.Commits)
+        {
+            @: <li>[@s.Hash.Substring(0, 7)] @s.What (@s.Who @@ @s.When )</li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+﻿@using Witinyki.Controllers
+@using Witinyki.Models
+@using Microsoft.Web.Mvc
+<div id="main">
+    <h1>@ViewBag.Title</h1>
+    <ul>
+        @foreach (VersionModel s in @ViewBag.Versions) {
+            @: <li>[@(Html.ActionLink<WikiController>(c => c.Browse(@s.PageName, @s.Hash), @s.Hash.Substring(0, 7)))] @s.What (@s.Who @@ @s.When)</li>
+        }
+    </ul>
+</div>

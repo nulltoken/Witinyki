@@ -1,0 +1,53 @@
+﻿#wrap
+{
+    width: 700px;
+    margin: 0 auto;
+}
+
+#main
+{
+    clear: both;
+}
+
+#wiki-actions
+{
+    float: left;
+}
+
+#wiki-actions ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+#wiki-actions li
+{
+    display: inline;
+}
+#page-actions
+{
+    float: right;
+}
+
+#page-actions ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+#page-actions li
+{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}

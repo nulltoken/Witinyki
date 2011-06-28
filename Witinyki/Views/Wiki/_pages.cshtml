@@ -1,0 +1,18 @@
+﻿@using Witinyki
+@using Witinyki.Controllers
+@using Microsoft.Web.Mvc
+<div id="main">
+    <h1>@ViewBag.Title</h1>
+    <ul>
+        @foreach (string s in @ViewBag.Pages)
+        {
+            @:
+        <li>
+            <span>@s</span>
+            <span>@(Html.ActionLink<WikiController>(c => c.Browse(@s, null), "Browse"))</span>
+            <span>@(Html.ActionLink<WikiController>(c => c.History(@s), "History"))</span>
+            <span>Delete</span>
+        </li>
+        }
+    </ul>
+</div>
